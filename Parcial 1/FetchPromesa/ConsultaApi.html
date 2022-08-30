@@ -9,6 +9,7 @@
 
 <body>
     <button id="boton">Recarga</button>
+    <h1 id="titulo">Hello </h1>
     <img id="imagen" height="450px">
     <script>
         document.getElementById('boton').addEventListener('click', function () {
@@ -16,9 +17,9 @@
         });
 
         function hacerPeticion() {
-            fetch("https://api.waifu.pics/sfw/waifu")
+            fetch("https://bible-api.com/john 3:16")
                 .then(respuesta => respuesta.json())
-                .then(datos => document.getElementById('imagen').src = datos.url)
+                .then(datos => document.getElementById('titulo').textContent = datos.text)
         }
     </script>
 </body>
