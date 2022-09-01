@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="txtNombre">Nombre</label>
+    <input type="text" id="txtNombre" aria-describedby="Nombre">
+    <label for="txtApellido">Apellido</label>
+    <input type="text" id="txtApellido" aria-describedby="Apellido">
+
+    <h1 id="titulo">Broma</h1>
+    <button id="boton">Pedir Chuck</button>
+
+    <script>
+        document.getElementById('boton').addEventListener('click', async function () {
+            let dato = await hacerPeticion();
+            console.log(dato);
+            document.getElementById('titulo').textContent = dato.value.joke;
+        });
+        async function hacerPeticion() {
+            let headersList = {
+                "Accept": "*/*",
+                "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+            }
+            let nom = document.getElementById('txtNombre').value;
+            let ape = document.getElementById('txtApellido').value;
+            let response = await fetch("http://api.icndb.com/jokes/random?firstName="+nom+"&lastName="+ape, {
+                method: "GET",
+                headers: headersList
+            });
+
+            let data = await response.json();
+            console.log(data);
+            return data;
+        }
+    </script>
+</body>
+
+</html>
