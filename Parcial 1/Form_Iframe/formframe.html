@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
+    <title>Document</title>
+</head>
+
+<body>
+    <form target="caja" method="get" action="http://api.icndb.com/jokes/random">
+
+        <label for="txtNombre" class="d-lg-table">Nombre</label>
+        <input type="text" id="txtNombre" aria-describedby="Nombre" class="form-text">
+        <label for="txtApellido" class="d-lg-table">Apellido</label>
+        <input type="text" id="txtApellido" aria-describedby="Apellido" class="form-text">
+        
+        <h1 id="titulo" class="card-header">Broma</h1>
+        <button id="boton" class="btn-primary">Pedir Chuck</button>
+        
+    </form>
+    <iframe name="caja"></iframe>
+        
+    
+    <!-- <script>
+        document.getElementById('boton').addEventListener('click', async function () {
+            let dato = await hacerPeticion();
+            console.log(dato);
+            document.getElementById('titulo').textContent = dato.value.joke;
+        });
+        async function hacerPeticion() {
+            let headersList = {
+                "Accept": "*/*",
+                "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+            }
+            let nom = document.getElementById('txtNombre').value;
+            let ape = document.getElementById('txtApellido').value;
+            let response = await fetch("http://api.icndb.com/jokes/random?firstName=" + nom + "&lastName=" + ape, {
+                method: "GET",
+                headers: headersList
+            });
+
+            let data = await response.json();
+            console.log(data);
+            return data;
+        }
+    </script> -->
+</body>
+
+</html>
