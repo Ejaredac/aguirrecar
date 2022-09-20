@@ -1,0 +1,7 @@
+{
+    "clientes":{
+        "100":{"nombre":"Eduardo","apellidop":"Cardenas"},
+        "200":{"nombre:":"Gerardo","apellidop":"Alvarado"},
+        "300":{"nombre":"Ricardo","apellidop":"Robles"}
+    }
+}
