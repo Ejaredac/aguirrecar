@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="cadena">cadena</label>
+    <input type="text" id="cadena">
+    <button id="btn1">Mayusculas</button>
+    <button id="btn2">Espacios</button>
+    <script type="module">
+        //import * as funciones from './cadenas.js'
+        document.getElementById("btn1").addEventListener("click", function () {
+            import('./cadenas.js')
+                .then(function (module) {
+                    let cad = document.getElementById("cadena").value;
+                    let cadmay = module.pasarMayuscula(cad)
+                    console.log(cadmay)
+                })
+            //let cad = document.getElementById("cadena").value;
+            //let cadmay = funciones.pasarMayuscula(cad)
+            //console.log(cadmay)
+        });
+        document.getElementById("btn2").addEventListener("click", function () {
+            import('./cadenas.js')
+                .then(function (module) {
+                    let cad = document.getElementById("cadena").value;
+                    let cadesp = module.quitarEspacios(cad)
+                    console.log(cadesp)
+                })
+            //let cad = document.getElementById("cadena").value;
+            //let cadesp = funciones.quitarEspacios(cad)
+            //console.log(cadesp)
+        });
+    </script>
+</body>
+
+</html>
