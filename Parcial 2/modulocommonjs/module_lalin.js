@@ -9,6 +9,10 @@ function obtenerLongitud(cadena) {
     return cadena.length;
 }
 
-exports.pasarMayuscula = pasarMayuscula;
-exports.quitarEspacios = quitarEspacios;
-exports.obtenerLongitud = obtenerLongitud;
+// exports.pasarMayuscula = pasarMayuscula;
+// exports.quitarEspacios = quitarEspacios;
+// exports.obtenerLongitud = obtenerLongitud;
+
+module.exports = pasarMayuscula;
+module.exports = quitarEspacios;
+module.exports = obtenerLongitud;

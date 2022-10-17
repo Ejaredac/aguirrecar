@@ -1,16 +1,11 @@
 {
-  "name": "module_lalin",
+  "name": "modulo-lalin-cardenas",
   "version": "1.0.0",
-  "description": "Modulo de uso de cadenas, en JavaScript para efectos de uso del body request de una peticion.",
+  "description": "",
   "main": "module_lalin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "string",
-    "str",
-    "tare"
-  ],
-  "author": "Eduardo Jared Aguirre Cardenas",
+  "author": "nanoexcalibur <ejaredac@hotmail.com>",
   "license": "ISC"
 }
