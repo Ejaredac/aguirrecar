@@ -1,14 +1,15 @@
-import {createPool} from 'mysql2/promise';
-import express from 'express';
-
+const mysql2 = require('mysql2/promise');
+const express = require('express');
+const cors = require('cors');
 const app = express();
 
-let connection = createPool({
+let connection = mysql2.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
     database: '19100140'
 });
+app.use(cors({ origin: "http://localhost" }));
 app.use(express.text());
 app.use(express.json());
 
@@ -18,7 +19,11 @@ app.get('/libro/:idlibro', async (req, res) => {
     const [ResponseDB] = await connection.query('SELECT * FROM libro where idlibro = ' + req.params.idlibro + ' ;');
     res.json(ResponseDB)
 });
+app.get('/libro', async (req, res) => {
 
+    const [ResponseDB] = await connection.query('SELECT * FROM libro');
+    res.json(ResponseDB)
+});
 app.post('/libro',async (req,res)=>{
     
     var nombrelibro = req.body.nombrelibro;
