@@ -1,0 +1,10 @@
+autor:
+  nombre: "Eduardo Jared Aguirre Cardenas"
+  pais: Mexico
+  Libros:
+    - Libro: Las mil tinieblas
+      Genero: Horror
+    - Libro: Precursores
+      Genero: Fantasia
+    - Libro: Las ordenes ocultas
+      Genero: Accion
