@@ -10,6 +10,7 @@ let connection = mysql2.createPool({
     password: '',
     database: '19100140'
 });
+
 app.use(cors({ origin: "http://localhost" }));
 app.use(express.text());
 app.use(express.json());
